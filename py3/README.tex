@@ -165,7 +165,7 @@
 *  [[elisp:(org-cycle)][| ]]  *DBLK: main-begin*                                       :: [[elisp:(beginning-of-buffer)][Top]] [[elisp:(delete-other-windows)][(1)]]  [[elisp:(org-cycle)][| ]]
 \end{comment}
 
-\title{bisos.full}
+\title{bisos.py3-all}
 
 %%%#+END:
 
@@ -176,42 +176,19 @@
 
 \section{Overview}
 
-bisos.core: is a top level module that requires core  BISOS (ByStar Internet Services OS) modules.
+bisos.py3-all: is a top level module that requires core  BISOS (ByStar Internet Services OS) modules.
 
 Main required modules are:
 
-\begin{itemize}
-\item unisos.common
-\item unisos.ucf
-\item unisos.icm
-\item unisos.icmExamples
-\item bisos.common
-\item bisos.bx-bases
-\item bisos.bootstrap
-\item bisos.examples
-\item blee.icmPlayer
-\end{itemize}
+% \begin{itemize}
+% \end{itemize}
 
-bisos.all: is a top level module that requires core  BISOS and all BISOS Pkgs (Feature Areas).
+bisos.py3-all: is a top level module that requires core  BISOS and all BISOS Pkgs (Feature Areas).
 
-In addition to bisos.core, bisos.all required modules are:
+In addition to bisos.core, bisos.py3-all required modules are:
 
 \begin{itemize}
-\item bisos.lcnt
-\item unisos.x822Msg
-\item unisos.marme
-\item bisos.things
-\item bisos.gossonot
-\end{itemize}
-
-
-
-The following suffixes and prefixes are used to indicate purpose.
-
-\begin{itemize}
-\item Example  -- Code/text that illustrates a particular usage
-\item Begin    -- A Template to be used as a beginning point for new code
-\item Start    -- Script that insert ``Begin'' for new code
+\item bisos.provision
 \end{itemize}
 
 \section{Support}
@@ -237,8 +214,7 @@ sudo pip install bisos.examples
 \section{Usage}
 
 \begin{verbatim}
-/usr/local/bin/icmStart.py
-/usr/local/bin/icmExamples.py
+This is a vitual package which simply requires other packages.
 \end{verbatim}
 
 %%%#+BEGIN: bx:dblock:lcnt:main-end :class "memo" :langs "en+fa"

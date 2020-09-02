@@ -1,6 +1,6 @@
-==========
-bisos.full
-==========
+=============
+bisos.py2-all
+=============
 
 .. contents::
    :depth: 3
@@ -9,7 +9,7 @@ bisos.full
 Overview
 ========
 
-bisos.core: is a top level module that requires core BISOS (ByStar
+bisos.py2-all: is a top level module that requires core BISOS (ByStar
 Internet Services OS) modules.
 
 Main required modules are:
@@ -32,10 +32,10 @@ Main required modules are:
 
 -  blee.icmPlayer
 
-bisos.all: is a top level module that requires core BISOS and all BISOS
-Pkgs (Feature Areas).
+bisos.py2-all: is a top level module that requires core BISOS and all
+BISOS Pkgs (Feature Areas).
 
-In addition to bisos.core, bisos.all required modules are:
+In addition to bisos.core, bisos.py2-all required modules are:
 
 -  bisos.lcnt
 
