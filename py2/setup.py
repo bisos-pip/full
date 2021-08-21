@@ -21,12 +21,12 @@ __version__ = '0.3'
 
 
 requires = [
-    'bisos.core',
-    'bisos.lcnt',
+    'bisos2.core',
+    'bisos2.lcnt',
     'unisos.x822Msg',
     'unisos.marme',
-    'bisos.things',
-    'bisos.gossonot',    
+    'bisos2.things',
+    'bisos2.gossonot',    
 ]
 
 
@@ -38,9 +38,9 @@ scripts = [
 
 
 setuptools.setup(
-    name='bisos.py2-all',
+    name='bisos2.py2-all',
     version=__version__,
-    namespace_packages=['bisos'],
+    namespace_packages=['bisos2'],
     packages=setuptools.find_packages(),
     scripts=scripts,
     # data_files=[

@@ -42,11 +42,11 @@ Installation
 
 ::
 
-    sudo pip install bisos.examples
+   sudo pip install bisos.examples
 
 Usage
 =====
 
 ::
 
-    This is a vitual package which simply requires other packages.
+   This is a vitual package which simply requires other packages.
