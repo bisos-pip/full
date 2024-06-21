@@ -17,11 +17,18 @@ def longDescription():
 
 
 #__version__ = get_version('unisos/icm/__init__.py')
-__version__ = '0.11'
+__version__ = '0.12'
 
 
 requires = [
+    'bisos.b',
     'bisos.provision',
+    'bisos.siteRegistrars',
+    'bisos.transit',
+    'blee.csPlayer',
+    'bisos.banna',
+    'bisos.usgAcct',
+    'bisos.regfps',
     'bisos.core',
     'bisos.lcnt',
     'bisos.things',
