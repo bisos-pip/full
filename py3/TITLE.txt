@@ -1,3 +1,0 @@
-bisos.py2-all: Top level module -- bisos.core + bisosPkgs + adopted bisos external pkgs
-
-

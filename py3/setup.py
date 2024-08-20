@@ -1,30 +1,61 @@
 #!/usr/bin/env python
 
-import setuptools
-#import sys
+# Template File:  "/bisos/apps/defaults/begin/templates/purposed/pyModule/python/setup.py"
 
-def readme():
-    with open('TITLE.txt') as f:
-         return f.readline().rstrip('\n')
+####+BEGINNOT: bx:dblock:global:file-insert :mode python :file "/bisos/apps/defaults/begin/templates/purposed/pyModule/python/commonSetupCode.py"
+
+import setuptools
+import re
+import inspect
+import pathlib
+
+def pkgName():
+    """ From this eg., filepath=.../bisos-pip/PkgName/py3/setup.py, extract PkgName. """
+    return "bisos.py3-all"
+    filename = inspect.getframeinfo(inspect.currentframe()).filename
+    grandMother = pathlib.Path(filename).resolve().parent.parent.name
+    return f"bisos.{grandMother}"
+
+def description():
+    """ Extract title from ./README.org which is expected to have a title: line. """
+    try:
+        with open('./README.org') as file:
+            while line := file.readline():
+                if match := re.search(r'^#\+title: (.*)',  line.rstrip()):
+                    return match.group(1)
+                return "MISSING TITLE in ./README.org"
+    except IOError:
+        return  "ERROR: Could not read ./README.org file."
 
 def longDescription():
-    with open('README.rst') as f:
-         return f.read()
+    """ Convert README.org to README.rst. """
+    try:
+        import pypandoc
+    except ImportError:
+        result = "WARNING: pypandoc module not found, could not convert to RST"
+        return result
+    if (result := pypandoc.convert_file('README.org', 'rst')) is None:
+        result = "ERROR: pypandoc.convert_file('README.org', 'rst') Failed."
+    return result
 
+####+END:
 
-#from setuphelpers import get_version, require_python
-#from setuptools import setup
+# :installed "0.22" --- Forces a specific version
+####+BEGIN: b:py3:pypi/nextVersion :increment 0.01
 
+# ./pypiUploadVer does not exist -- pypiNextVer=0.13 -- installedVersion=0.12
+def pkgVersion():
+        return '0.12'  # Version Nu Of Installed Pkg
 
-#__version__ = get_version('unisos/icm/__init__.py')
-__version__ = '0.12'
+####+END:
 
+####+BEGINNOT: b:py3:pypi/requires :extras ()
 
 requires = [
     'bisos.b',
     'bisos.provision',
     'bisos.siteRegistrars',
-    'bisos.transit',
+    'bisos.transit',    # bring over black for bpip
     'blee.csPlayer',
     'bisos.banna',
     'bisos.usgAcct',
@@ -40,33 +71,30 @@ requires = [
     'bisos.currents',
     'bisos.pals',
 ]
-# 'uniso.x822Msg',
-# 'unisos.marme',
+####+END:
 
-
-#print('Setting up under python version %s' % sys.version)
-#print('Requirements: %s' % ','.join(requires))
+####+BEGIN: b:py3:pypi/scripts :comment ""
 
 scripts = [
 ]
+####+END:
 
+#
+# Data files would be  specified in ./MANIFEST.in as: # recursive-include bisos/pkgName *
+#
+
+data_files = [
+]
+
+# :pkgName "--auto--"  --- results in use of name=pkgName(),
+####+BEGINNOT: b:py3:pypi/setupFuncArgs :pkgName ""
 
 setuptools.setup(
     name='bisos.py3-all',
-    version=__version__,
-    namespace_packages=['bisos'],
+    version=pkgVersion(),
     packages=setuptools.find_packages(),
     scripts=scripts,
-    # data_files=[
-    #     ('pkgInfo', ["unisos/pkgInfo/fp/icmsPkgName/value"]),
-    # ],
-    #package_dir={'unisos.marme': 'unisos'},
-    # package_data={
-    #     'unisos.marme': ['pkgInfo/fp/icmsPkgName/value'],
-    # },
-    # package_data={
-    #     '': ['unisos/marme/resolv.conf'],
-    # },
+    #data_files=data_files,
     include_package_data=True,
     zip_safe=False,
     author='Mohsen Banan',
@@ -75,7 +103,7 @@ setuptools.setup(
     maintainer_email='libre@mohsen.1.banan.byname.net',
     url='http://www.by-star.net/PLPC/180047',
     license='AGPL',
-    description=readme(),
+    description=description(),
     long_description=longDescription(),
     download_url='http://www.by-star.net/PLPC/180047',
     install_requires=requires,
@@ -89,3 +117,5 @@ setuptools.setup(
         'Topic :: Software Development :: Libraries :: Python Modules',
         ]
     )
+
+####+END:

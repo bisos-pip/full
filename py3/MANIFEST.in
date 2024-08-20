@@ -2,5 +2,5 @@
 
 include lh-agpl3-LICENSE.txt
 
-include TITLE.txt
+include README.org
 include README.rst
