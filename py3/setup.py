@@ -38,7 +38,7 @@ def longDescription():
 # b:py3:pypi:setup/version Arguments  :forSys t :forPyPi t :constant "666"
 ####+BEGIN: b:py3:pypi:setup/version :comment "Auto Detected"
 
-# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.14 -- forSysVersion=0.12 -- constant=NA
+# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.16 -- forSysVersion=0.12 -- constant=NA
 def pkgVersion():
         return '0.12'
 
@@ -70,6 +70,7 @@ requires = [
     'bisos.pals',
     'bisos.binsprep',
     'bisos.capability',
+        'bisos.facter',
 ]
 
 
@@ -92,7 +93,7 @@ data_files = [
 ####+BEGIN: b:py3:pypi:setup/funcArgs :comment "defaults to --auto--"
 
 setuptools.setup(
-    name=pkgName(),  # bisos.py3-all
+    name=pkgName(),  # 'bisos.py3-all'
     version=pkgVersion(),
     packages=setuptools.find_packages(),
     scripts=scripts,
@@ -103,11 +104,9 @@ setuptools.setup(
     author_email='libre@mohsen.1.banan.byname.net',
     maintainer='Mohsen Banan',
     maintainer_email='libre@mohsen.1.banan.byname.net',
-    url='http://www.by-star.net/PLPC/180047',
     license='AGPL',
     description=description(),
     long_description=longDescription(),
-    download_url='http://www.by-star.net/PLPC/180047',
     install_requires=requires,
     classifiers=[
         'Development Status :: 5 - Production/Stable',
