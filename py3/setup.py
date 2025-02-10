@@ -70,7 +70,15 @@ requires = [
     'bisos.pals',
     'bisos.binsprep',
     'bisos.capability',
-        'bisos.facter',
+    'bisos.facter',
+    'bisos.csPlayer',
+    'bisos.mmwsIcm',
+    'bisos.githubApi',
+    'bisos.gcipher',
+    'bisos.virsh',
+    'bisos.sbom',
+    'bisos.stub',
+    'bisos.capSpecs',
 ]
 
 
