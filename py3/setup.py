@@ -38,7 +38,7 @@ def longDescription():
 # b:py3:pypi:setup/version Arguments  :forSys t :forPyPi t :constant "666"
 ####+BEGIN: b:py3:pypi:setup/version :comment "Auto Detected"
 
-# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.22 -- forLocalVersion=0.12 -- constant=NA
+# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.23 -- forLocalVersion=0.12 -- constant=NA
 def pkgVersion():
         return '0.12'
 
@@ -80,6 +80,7 @@ requires = [
     'bisos.virsh',
     'bisos.sbom',
     'bisos.capSpecs',
+    'bisos.bxoGitlab',
 ]
 
 
