@@ -38,7 +38,7 @@ def longDescription():
 # b:py3:pypi:setup/version Arguments  :forSys t :forPyPi t :constant "666"
 ####+BEGIN: b:py3:pypi:setup/version :comment "Auto Detected"
 
-# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.16 -- forSysVersion=0.12 -- constant=NA
+# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.21 -- forLocalVersion=0.12 -- constant=NA
 def pkgVersion():
         return '0.12'
 
@@ -49,8 +49,11 @@ def pkgVersion():
 ####+END:
 
 requires = [
+    'bisos',
     'bisos.b',
     'bisos.common',
+    'bisos.examples',
+    'bisos.crypt',
     'bisos.provision',
     'bisos.siteRegistrars',
     'bisos.transit',    # bring over black for bpip
@@ -77,7 +80,6 @@ requires = [
     'bisos.gcipher',
     'bisos.virsh',
     'bisos.sbom',
-    'bisos.stub',
     'bisos.capSpecs',
 ]
 
