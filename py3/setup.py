@@ -38,50 +38,59 @@ def longDescription():
 # b:py3:pypi:setup/version Arguments  :forSys t :forPyPi t :constant "666"
 ####+BEGIN: b:py3:pypi:setup/version :comment "Auto Detected"
 
-# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.23 -- forLocalVersion=0.12 -- constant=NA
+# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.24 -- forLocalVersion=0.12 -- constant=NA
 def pkgVersion():
         return '0.12'
 
 ####+END:
 
 # b:py3:pypi:setup/requires :extras ; :requirements "requirements.txt" (bring here requirements.txt)
-####+BEGINNOT: b:py3:pypi:setup/requires :extras ()
-####+END:
+####+BEGIN: b:py3:pypi:setup/requires :extras () :requirements "requires.outside"
 
 requires = [
-    'bisos',
-    'bisos.b',
-    'bisos.common',
-    'bisos.examples',
-    'bisos.crypt',
-    'bisos.provision',
-    'bisos.siteRegistrars',
-    'bisos.transit',    # bring over black for bpip
-    'bisos.banna',
-    'bisos.usgAcct',
-    'bisos.regfps',
-    'bisos.core',
-    'bisos.lcnt',
-    'bisos.things',
-    'bisos.gossonot',
-    'bisos.icm',
-    'bisos.basics',
-    'bisos.bpo',
-    'bisos.cntnr',
-    'bisos.currents',
-    'bisos.pals',
-    'bisos.binsprep',
-    'bisos.capability',
-    'bisos.facter',
-    'bisos.csPlayer',
-    'bisos.mmwsIcm',
-    'bisos.githubApi',
-    'bisos.gcipher',
-    'bisos.virsh',
-    'bisos.sbom',
-    'bisos.capSpecs',
-    'bisos.bxoGitlab',
+'bisos.b',
+'bisos.banna',
+'bisos.bashStandaloneIcmSeed',
+'bisos.basics',
+'bisos.binsprep',
+'bisos.bootstrap',
+'bisos.bpo',
+'bisos.bx-bases',
+'bisos.bxoGitlab',
+'bisos.capability',
+'bisos.capSpecs',
+'bisos.cmdb',
+'bisos.cntnr',
+'bisos.common',
+'bisos.core',
+'bisos.coreDist',
+'bisos.crypt',
+'bisos.csPlayer',
+'bisos.currents',
+'bisos.debian',
+'bisos.examples',
+'bisos.facter',
+'bisos.gcipher',
+'bisos.githubApi',
+'bisos.gossonot',
+'bisos.graphviz',
+'bisos.lcnt',
+'bisos.marmee',
+'bisos.mmwsIcm',
+'bisos.pals',
+'bisos.platform',
+'bisos.provision',
+'bisos.pycs',
+'bisos.qmail',
+'bisos.regfps',
+'bisos.sbom',
+'bisos.siteRegistrars',
+'bisos.things',
+'bisos.transit',
+'bisos.usgAcct',
+'bisos.virsh',
 ]
+####+END:
 
 
 # b:py3:pypi:setup/scripts :comment
