@@ -38,7 +38,7 @@ def longDescription():
 # b:py3:pypi:setup/version Arguments  :forSys t :forPyPi t :constant "666"
 ####+BEGIN: b:py3:pypi:setup/version :comment "Auto Detected"
 
-# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.24 -- forLocalVersion=0.12 -- constant=NA
+# ./pypiUploadVer DID NOT exist -- forPypiVersion=0.25 -- forLocalVersion=0.12 -- constant=NA
 def pkgVersion():
         return '0.12'
 
@@ -52,7 +52,6 @@ requires = [
 'bisos.banna',
 'bisos.bashStandaloneIcmSeed',
 'bisos.basics',
-'bisos.binsprep',
 'bisos.bootstrap',
 'bisos.bpo',
 'bisos.bx-bases',
@@ -83,6 +82,7 @@ requires = [
 'bisos.pycs',
 'bisos.qmail',
 'bisos.regfps',
+'bisos.sites',
 'bisos.sbom',
 'bisos.siteRegistrars',
 'bisos.things',

@@ -32,6 +32,7 @@ bisos.provision
 bisos.pycs
 bisos.qmail
 bisos.regfps
+bisos.sites
 bisos.sbom
 bisos.siteRegistrars
 bisos.things
